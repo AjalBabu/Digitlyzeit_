@@ -350,7 +350,10 @@
                             <p class="text-4xl font-extrabold accent-text" id="estimatedNewLeads">0</p>
                         </div>
                         <div>
-                            <p class="text-sm text-gray-500 mt-4">These are estimated projections and actual results may vary based on market conditions and specific strategies.</p>
+                            <p class="text-xl font-semibold text-gray-700">Potential Marketing ROI:</p>
+                            <p class="text-4xl font-extrabold accent-text" id="potentialROI">0%</p>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">These are estimated projections and actual results may vary based on market conditions and specific strategies.</p>
                     </div>
                 </div>
             </div>
@@ -769,7 +772,7 @@
             const calculationResults = document.getElementById('calculationResults');
             const projectedRevenueIncrease = document.getElementById('projectedRevenueIncrease');
             const estimatedNewLeads = document.getElementById('estimatedNewLeads');
-            const potentialROI = document.getElementById('potentialROI');
+            const potentialROI = document.getElementById('potentialROI'); // Ensure this element is retrieved
 
             if (growthCalculatorForm) {
                 growthCalculatorForm.addEventListener('submit', function(event) {
@@ -784,7 +787,7 @@
                         return;
                     }
 
-                   // Simple placeholder calculations
+                    // Simple placeholder calculations
                     // These are illustrative and should be based on real data/models for a production app
                     const calculatedRevenueIncrease = currentRevenue * (desiredGrowth / 100) * 0.8; // Assume 80% of desired growth is achievable initially
                     const calculatedNewLeads = (marketingSpend / 150) * 1.5; // Assume ₹150 per lead, improved by 50%
